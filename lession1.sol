@@ -32,3 +32,11 @@ contract Hellworld{
     }
 }
 }
+
+Solidity存储模式 六种
+1 .storage
+2.memory
+3.calldata
+4.codes
+5.logs
+6.stack
