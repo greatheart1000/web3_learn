@@ -10,3 +10,14 @@ contract Hellworld{
     string stringval ="hello world";
     address addvar =0xC6F2Ee18072B353E1f921DD1615DC4634650002b;
 }
+
+pragma solidity ^0.8.26;
+contract Hellworld{ // 写一个函数
+  
+    string stringval ="hello world";
+    function sayhello() public view returns(string memory)//这部分是函数的声明
+    {
+        return stringval;
+    }
+    
+}
