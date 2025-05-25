@@ -5,4 +5,6 @@ MetaMask
 https://docs.chain.link/   <br>MetaMask
  <br> https://kcno38rbm7bc.feishu.cn/wiki/OQ5lwXujliSOA4khSZjc0jagnYJ<br>
 
-  web3社区 https://discord.gg/hEKMJEwPXb
+  web3社区 https://discord.gg/hEKMJEwPXb <br>
+
+ 水龙头 https://faucets.chain.link/
