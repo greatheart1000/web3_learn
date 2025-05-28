@@ -20,7 +20,7 @@ contract HelloWorld {
         address addr;
     }
 
-    Info[] infos;
+    Info[] infos; //声明了一个动态数组 infos 来存储 Info 结构体的实例
 
     mapping(uint256 id => Info info) infoMapping;
   
@@ -42,3 +42,61 @@ contract HelloWorld {
         return string.concat(helloWorldStr, " from Frank's contract.");
     }
 }
+// 获取数组中某个位置的 Info 实例
+    function getInfo(uint256 index) public view returns (string memory, uint256, address) {
+        require(index < infos.length, "Index out of bounds");
+        return (infos[index].phrase, infos[index].id, infos[index].addr);
+    }
+
+    // 获取数组的长度
+    function getInfosLength() public view returns (uint256) {
+        return infos.length;
+    }
+
+############################################################### 重新学习 加深印象
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.2;
+
+contract Helloworld{
+    string strval ="hello world";
+    struct Info {
+        string word;
+        uint256 id;
+        address addr;
+    }
+    Info[] infos; //声明一个数组类别的结构体
+    mapping(uint256 id => Info info) mappvar ;
+
+    function sayhello(uint256 num) public view returns(string memory ){
+        if (mappvar[num].addr==address(0x0)){
+            return strval;
+        }
+        else {
+            return mappvar[num].word;
+        }
+    
+        //for关键字 遍历
+    //     for(uint256 i = 0; i<infos.length; i++)
+    //     {
+    //         if(infos[i].id == num ){
+    //             return addstring(infos[i].word);
+    //         }
+    //         return strval;
+
+    //     }
+    // } 
+    //不给这个sayhello函数传参数,只是单纯地给其返回变量strval
+
+    function setHelloworld(string memory newstring,uint256 id_) public {
+        // strval =newstring;
+        Info memory info= Info(newstring, id_,  msg.sender);
+        mappvar[id_] =info; //键值对
+        infos.push(info); //注意这里 变量是info 
+    } //此函数是改变变量strval的值的函数
+
+    function addstring(string memory str1) internal pure returns(string memory){
+        return string.concat(str1,"from fank's contract");
+    } //这里的 internal pure 就是不希望外部调用 pure关键字说明这是单纯的计算函数
+
+}
+################################################
