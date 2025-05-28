@@ -100,3 +100,55 @@ contract Helloworld{
 
 }
 ################################################
+
+工厂模式
+contract Factory {
+    Child[] children;
+
+    function createChild(uint data) {
+       Child child = new Child(data);
+       children.push(child);
+    }
+}
+
+contract Child {
+   uint data;
+   constructor(uint _data) {
+      data = _data;
+   }
+}
+####################################################
+1. Factory 合约
+Child[] children;
+
+声明了一个动态数组 children，数组元素类型是 Child。
+在 Solidity 里，Child 类型的数组会存储各个 Child 合约实例的地址（合约引用）。
+function createChild(uint data) { … }
+
+这是一个无返回值的公有函数（默认 public 可见性）。
+接收一个 uint data 参数，用于初始化后面要创建的 Child 合约。
+Child child = new Child(data);
+
+动态部署（new）一个 Child 合约实例，并将构造函数参数设为 data。
+这个操作会在区块链上生成一个新的合约地址，child 变量保存该合约实例的引用（即地址）。
+children.push(child);
+
+把刚刚创建的 Child 合约地址追加到 children 数组里，方便后续在 Factory 合约中统一管理或查询。
+2. Child 合约
+uint data;
+
+定义了一个状态变量 data，在合约存储里保存了一个无符号整数。
+constructor(uint _data) { data = _data; }
+
+构造函数，在合约部署时执行一次。
+把外部传入的 _data 值赋给状态变量 data，完成初始化。
+整体流程
+用户或其它合约调用 Factory.createChild(123)。
+Factory 内部执行 new Child(123)：
+在链上部署一个新的 Child 合约，内部 data 被设置为 123。
+Factory 再把新合约的地址推入 children 数组。
+这样 Factory 就能通过 children[i] 拿到第 i 个 Child 合约的地址，进行后续调用。
+补充说明
+目前 Child.data 变量是默认私有的（internal），外界无法直接读取。若想在 Factory 或外部查看，可以把它改成 public uint data;，这样编译器会自动生成一个 data() 访问函数。
+每调用一次 createChild，都要额外支付一次创建合约的 Gas。
+这种模式常用于 “Factory + Instance” 设计，Factory 负责集中管理多个子合约。
