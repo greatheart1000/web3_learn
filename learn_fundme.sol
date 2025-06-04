@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
-
+// https://github.com/smartcontractkit/Web3_tutorial_Chinese
 contract Fundme{
     //创建一个众筹的合约，这个合约有收款功能，有退款功能 通过函数来接受funder的ETH
     //1.当筹到了目标值的钱后，筹款者可以提取钱款
