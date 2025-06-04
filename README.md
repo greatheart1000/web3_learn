@@ -8,3 +8,5 @@ https://docs.chain.link/   <br>MetaMask
   web3社区 https://discord.gg/hEKMJEwPXb <br>
  水龙头 https://faucets.chain.link/<br>
  跟我学 Solidity https://learnblockchain.cn/article/1952<br>
+
+ ERC20 标准合约 https://docs.openzeppelin.com/contracts/4.x/erc20 <br>
