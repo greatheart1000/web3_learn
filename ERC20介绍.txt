@@ -1,0 +1,34 @@
+// ERC20: Fungible Token
+// ERC721: NFT – Non-Fungible Token
+它们的含义和区别大致如下：
+
+ERC：Ethereum Request for Comments
+这是以太坊社区用来发布和讨论标准的命名方式，类似于 Internet 上的 RFC。标准编号越小，历史越久。
+
+ERC20 – 可替代（Fungible）代币
+
+“可替代”意思是：每一个单位的代币都是相同、可互换的，就像纸币上的“1 元”都是一样的。
+ERC20 定义了一套统一接口（函数和事件），包括：
+• totalSupply() —— 代币总量
+• balanceOf(address) —— 查询账户余额
+• transfer(to, amount) —— 转账
+• approve(spender, amount) & allowance(owner, spender) —— 授权与额度
+• transferFrom(from, to, amount) —— 被授权后的转账
+• 以及 Transfer、Approval 等事件
+基于 ERC20 的示例：USDT、DAI、LINK、UNI、各类项目的治理代币等。
+ERC721 – 不可替代（Non-Fungible）代币，也就是 NFT
+
+“不可替代”意思是：每一个代币都有自己唯一的 ID 和（通常）对应的元数据，不能互换。就像收藏卡、艺术品，每个都是独一无二的。
+ERC721 定义了类似的基础接口：
+• balanceOf(owner) —— 拥有多少张 NFT
+• ownerOf(tokenId) —— 某张 NFT（tokenId）的持有者
+• safeTransferFrom(from, to, tokenId) —— 安全转移
+• approve(to, tokenId) & setApprovalForAll(operator, approved) —— 授权
+• Transfer、Approval、ApprovalForAll 等事件
+基于 ERC721 的示例：CryptoKitties、Bored Ape Yacht Club、OpenSea 上的大量数字藏品等。
+——
+
+总结
+
+ERC20 = 可互换、同质化的代币，适合做货币、抵押、治理权重等。
+ERC721 = 不可互换、唯一性的代币，适合做数字收藏品、身份凭证、游戏道具等。
