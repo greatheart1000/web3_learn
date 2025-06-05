@@ -1,4 +1,4 @@
-// ERC20: Fungible Token
+// ERC20: Fungible Token fungible 代替的；可取代的 可替代的物；（偿还债务用以）替代的财产；代替物
 // ERC721: NFT – Non-Fungible Token
 它们的含义和区别大致如下：
 
