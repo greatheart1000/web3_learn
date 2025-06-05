@@ -258,7 +258,20 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         }
         _update(address(0), account, value);
     }
+function _mint(address account, uint256 value) internal
+这个函数用于铸造（创建）新代币。
 
+address account: 新铸造的代币将被分配给这个地址。
+uint256 value: 要铸造的代币数量。
+internal: 只能在合约内部或其派生合约中调用。
+NOTE: This function is not virtual, {_update} should be overridden instead.：这是一个重要的注释，它强调 _mint 函数本身不是 virtual 的，如果您想修改铸造逻辑，您应该重写（override）底层的 _update 函数。
+内部逻辑：
+
+if (account == address(0))：
+检查目标地址是否为零地址。在 ERC-20 标准中，不能将代币铸造给零地址（因为那等同于销毁，但 _mint 的语义是创建）。
+revert ERC20InvalidReceiver(address(0));：如果目标是零地址，则抛出自定义错误。
+_update(address(0), account, value);：
+调用核心的 _update 函数。这里将 from 设置为 address(0)，表示代币是从无中生有地创建出来的。
     /**
      * @dev Destroys a `value` amount of tokens from `account`, lowering the total supply.
      * Relies on the `_update` mechanism.
@@ -273,7 +286,18 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         }
         _update(account, address(0), value);
     }
-
+function _burn(address account, uint256 value) internal
+这个函数用于销毁（移除）代币。
+address account: 要销毁代币的来源地址。
+uint256 value: 要销毁的代币数量。
+internal: 只能在合约内部或其派生合约中调用。
+NOTE: This function is not virtual, {_update} should be overridden instead：与 _mint 类似，强调 _burn 函数本身不是 virtual 的，如果要修改销毁逻辑，应重写底层的 _update 函数。
+内部逻辑：
+if (account == address(0))：
+检查来源地址是否为零地址。在 ERC-20 标准中，不能从零地址销毁代币（因为零地址没有余额）。
+revert ERC20InvalidSender(address(0));：如果来源是零地址，则抛出自定义错误。
+_update(account, address(0), value);：
+调用核心的 _update 函数。这里将 to 设置为 address(0)，表示代币被发送到零地址，从而从总供应量中移除。
     /**
      * @dev Sets `value` as the allowance of `spender` over the `owner`'s tokens.
      *
