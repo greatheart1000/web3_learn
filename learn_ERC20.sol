@@ -27,7 +27,7 @@ import {IERC20Errors} from "../../interfaces/draft-IERC6093.sol";
  * instead returning `false` on failure. This behavior is nonetheless
  * conventional and does not conflict with the expectations of ERC-20
  * applications.
- */
+ */abstract contract ERC20: 声明一个抽象合约 ERC20，继承自 Context、IERC20、IERC20Metadata 和 IERC20Errors。
 abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
     mapping(address account => uint256) private _balances;
 
@@ -37,7 +37,11 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
 
     string private _name;
     string private _symbol;
-
+_balances: 映射每个地址的余额。
+_allowances: 映射每个地址授权给其他地址的金额。
+_totalSupply: 总供应量。
+_name: 代币名称。
+_symbol: 代币符号。
     /**
      * @dev Sets the values for {name} and {symbol}.
      *
@@ -46,7 +50,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
     constructor(string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
-    }
+    } //初始化代币的名称和符号。
 
     /**
      * @dev Returns the name of the token.
@@ -79,7 +83,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
     function decimals() public view virtual returns (uint8) {
         return 18;
     }
-
+// decimals(): 返回代币的小数位数，默认为 18
     /// @inheritdoc IERC20
     function totalSupply() public view virtual returns (uint256) {
         return _totalSupply;
@@ -89,7 +93,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
     function balanceOf(address account) public view virtual returns (uint256) {
         return _balances[account];
     }
-
+//balanceOf(address account): 返回指定地址的余额。
     /**
      * @dev See {IERC20-transfer}.
      *
@@ -108,7 +112,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
     function allowance(address owner, address spender) public view virtual returns (uint256) {
         return _allowances[owner][spender];
     }
-
+// allowance(address owner, address spender): 返回 owner 授权给 spender 的金额
     /**
      * @dev See {IERC20-approve}.
      *
@@ -124,7 +128,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         _approve(owner, spender, value);
         return true;
     }
-
+//approve(address spender, uint256 value): 授权 spender 可以从调用者那里转移最多 value 数量的代币。
     /**
      * @dev See {IERC20-transferFrom}.
      *
@@ -147,7 +151,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         _transfer(from, to, value);
         return true;
     }
-
+//transferFrom(address from, address to, uint256 value): 从 from 地址转移 value 数量的代币到 to 地址，需要先获得 from 地址的授权
     /**
      * @dev Moves a `value` amount of tokens from `from` to `to`.
      *
