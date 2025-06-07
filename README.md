@@ -10,3 +10,8 @@ https://docs.chain.link/   <br>MetaMask
  跟我学 Solidity https://learnblockchain.cn/article/1952<br>
 
  ERC20 标准合约 https://docs.openzeppelin.com/contracts/4.x/erc20 <br>
+
+ node -v
+ node init 
+ npm install hardhat --save-dev
+ npx hardhat  node情况下运行某个命令
