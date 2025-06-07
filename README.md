@@ -15,3 +15,4 @@ https://docs.chain.link/   <br>MetaMask
  node init <br>
  npm install hardhat --save-dev <br>
  npx hardhat  node情况下运行某个命令 <br>
+ 怎么在这个路径下打开vscode呢 命令是什么 code . <br>
