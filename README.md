@@ -11,7 +11,7 @@ https://docs.chain.link/   <br>MetaMask
 
  ERC20 标准合约 https://docs.openzeppelin.com/contracts/4.x/erc20 <br>
 
- node -v
- node init 
- npm install hardhat --save-dev
- npx hardhat  node情况下运行某个命令
+ node -v <br>
+ node init <br>
+ npm install hardhat --save-dev <br>
+ npx hardhat  node情况下运行某个命令 <br>
