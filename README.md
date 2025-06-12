@@ -31,4 +31,11 @@ ignition文件夹 <br>
 hardhat.config.js文件  <br>
 contract文件夹 <br>
 test文件夹 <br>
+npm install @chainlink/contracts --save-dev 安装这个包 <br>
+npm uninstall @chainlink/contracts 删除命令
+npx hardhat compile 这个命令编译所有在contract文件夹的sol文件
 
+
+Ethers.js的安装命令 npm install --save ethers <br>
+
+npx hardhat run scripts/DeployFundMe.js
