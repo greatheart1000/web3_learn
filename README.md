@@ -16,3 +16,19 @@ https://docs.chain.link/   <br>MetaMask
  npm install hardhat --save-dev <br>
  npx hardhat  node情况下运行某个命令 <br>
  怎么在这个路径下打开vscode呢 命令是什么 code . <br>
+
+node -v 查看当前node的版本           <br>
+npm init 创建一个 nodejs项目，会有package.json文件        <br>
+code . vscode 打开当前的文件夹       <br>
+
+npm install hardhat --save-dev  <br>安装 hardhat包 只有开发环境使用 安装后 package.json多了内容 <br>"devDependencies": {
+    "hardhat": "^2.24.2"
+  }
+npx hardhat  通过npm 创建一个hardhat项目 <br>
+.gitignore 会忽略哪些文件 <br>
+
+ignition文件夹 <br>
+hardhat.config.js文件  <br>
+contract文件夹 <br>
+test文件夹 <br>
+
