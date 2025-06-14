@@ -1,5 +1,5 @@
-## 相关资料
-MetaMask
+# 相关资料
+## MetaMask
 学习资料 https://github.com/smartcontractkit/Web3_tutorial_Chinese  
 编程环境 https://remix.ethereum.org/
 https://docs.chain.link/   <br>MetaMask
@@ -60,9 +60,11 @@ npm install --save-dev dotenv
 .env.enc
 SEPLIO_URL: ENCRYPTED|YeqxnACd4b1r+iG3cz04PSUogDd5JN4UReAcHNMiVjdcrIeZ0AkuXdCsIR6Hpe5NprGWixsJ9jfO0xQjY0QGmii0Bqx/A2Vkn3Tb4tc7AJdkELZhp7Hi/yNbdUsmTA==      <br>
 PRIVATE_KEY: ENCRYPTED|s7BL6qGaXjpbLDrNAVRLbANXqXRpZaSEh0DmP370Ie+Q3fweqTWnTciY06uEpssu9bBp5GF4               <br>
+
 然后harthat.config.js里面的 require("dotenv").config 改为 require("@chainlink/env-enc").config() <br> 
 require("@nomicfoundation/hardhat-toolbox"); <br>
 require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
 然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
 
+![查看网络的chainId](https://chainlist.org/?search=Sepolia&testnets=true)
 
