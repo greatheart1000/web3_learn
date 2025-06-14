@@ -41,3 +41,6 @@ npx hardhat compile 这个命令编译所有在contract文件夹的sol文件
 Ethers.js的安装命令 npm install --save ethers <br>
 ethers.js 的网址 https://docs.ethers.org/v6/api/ 
 npx hardhat run scripts/DeployFundeMe.js
+
+npm install --save-dev dotenv  安装第三方的包  <br>
+Alchemy,Infura,QuickNode //第三方服务商  <br>
