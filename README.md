@@ -8,6 +8,7 @@ https://docs.chain.link/   <br>MetaMask
  App Name: web3  APIKeyToken : 2GAIWVSPN4XMC1GVW7I4X1G5AS8CV95BZ1 <br>
   web3社区 https://discord.gg/hEKMJEwPXb <br>
  水龙头 https://faucets.chain.link/<br>
+ 查询网络的id 网址 https://chainlist.org/ 比如 Ethereum Sepolia 11155111  以太坊主网: Ethereum Mainnet 1
  https://faucets.chain.link/ 领取ETH测试网的币 <br>
  https://sepolia.etherscan.io/tx/0xa8b86d1b578f27c32ca76cbae8717eeab649b6a4b67f3074bf5c3fe9df78402a 查看交易记录 <br>
  跟我学 Solidity https://learnblockchain.cn/article/1952<br>
@@ -63,3 +64,5 @@ PRIVATE_KEY: ENCRYPTED|s7BL6qGaXjpbLDrNAVRLbANXqXRpZaSEh0DmP370Ie+Q3fweqTWnTciY0
 require("@nomicfoundation/hardhat-toolbox"); <br>
 require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
 然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
+
+
