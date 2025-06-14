@@ -8,6 +8,7 @@ https://docs.chain.link/   <br>MetaMask
   web3社区 https://discord.gg/hEKMJEwPXb <br>
  水龙头 https://faucets.chain.link/<br>
  https://faucets.chain.link/ 领取ETH测试网的币 <br>
+ https://sepolia.etherscan.io/tx/0xa8b86d1b578f27c32ca76cbae8717eeab649b6a4b67f3074bf5c3fe9df78402a 查看交易记录 <br>
  跟我学 Solidity https://learnblockchain.cn/article/1952<br>
 
  ERC20 标准合约 https://docs.openzeppelin.com/contracts/4.x/erc20 <br>
