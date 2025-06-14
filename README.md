@@ -4,7 +4,8 @@ MetaMask
 编程环境 https://remix.ethereum.org/
 https://docs.chain.link/   <br>MetaMask
  <br> https://kcno38rbm7bc.feishu.cn/wiki/OQ5lwXujliSOA4khSZjc0jagnYJ<br>
-
+ Etherscan.io 这个网站的 账号: JianCai0706 密码: qPH8.!-UQ9e9g/5  <br>
+ App Name: web3  APIKeyToken : 2GAIWVSPN4XMC1GVW7I4X1G5AS8CV95BZ1 <br>
   web3社区 https://discord.gg/hEKMJEwPXb <br>
  水龙头 https://faucets.chain.link/<br>
  https://faucets.chain.link/ 领取ETH测试网的币 <br>
@@ -44,3 +45,20 @@ npx hardhat run scripts/DeployFundeMe.js
 
 npm install --save-dev dotenv  安装第三方的包  <br>
 Alchemy,Infura,QuickNode //第三方服务商  <br>
+npm install --save-dev dotenv 
+npm install --save-dev @chainlink/env-enc 加密的包 明文变密文
+npx env-enc set-pw 设置密码
+npx env-enc set  
+SEPOLIE_URL 
+Please enter the variable value (input will be hidden):
+**********************************************
+Would you like to set another variable? Please enter the variable name (or press ENTER to finish):
+PRIVATE_KEY
+会多一个配置文件 显示如下:
+.env.enc
+SEPLIO_URL: ENCRYPTED|YeqxnACd4b1r+iG3cz04PSUogDd5JN4UReAcHNMiVjdcrIeZ0AkuXdCsIR6Hpe5NprGWixsJ9jfO0xQjY0QGmii0Bqx/A2Vkn3Tb4tc7AJdkELZhp7Hi/yNbdUsmTA==
+PRIVATE_KEY: ENCRYPTED|s7BL6qGaXjpbLDrNAVRLbANXqXRpZaSEh0DmP370Ie+Q3fweqTWnTciY06uEpssu9bBp5GF4
+然后harthat.config.js里面的 require("dotenv").config 改为 require("@chainlink/env-enc").config() <br> 
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
+然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
