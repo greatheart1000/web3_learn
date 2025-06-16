@@ -66,5 +66,7 @@ require("@nomicfoundation/hardhat-toolbox"); <br>
 require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
 然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
 
-![查看网络的chainId](https://chainlist.org/?search=Sepolia&testnets=true)
+![solana教程](https://imageshainlist.org/?search=Sepolia&testnets=true)
+
+solana教程  https://ruilab.xyz/blockchain <br>
 
