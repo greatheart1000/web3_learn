@@ -1,5 +1,6 @@
 # 相关资料
 ## MetaMask
+
 学习资料 https://github.com/smartcontractkit/Web3_tutorial_Chinese  
 编程环境 https://remix.ethereum.org/
 https://docs.chain.link/   <br>MetaMask
@@ -66,7 +67,7 @@ require("@nomicfoundation/hardhat-toolbox"); <br>
 require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
 然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
 
-![iamge](https://github.com/greatheart1000/web3_learn/blob/master/solana.jpg)
+
 
 solana教程  https://ruilab.xyz/blockchain <br>
 
