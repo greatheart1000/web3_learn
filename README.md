@@ -1,6 +1,6 @@
 # 相关资料
 ## MetaMask
-![image](./master/web3%E8%BD%AC%E5%9E%8B%E8%87%AA%E5%AD%A6%E8%B7%AF%E7%BA%BF%E5%9B%BE_%E5%89%AF%E6%9C%AC.jpg)
+![image](岗位转型路线规划图_副本.jpg)
 
 学习资料 https://github.com/smartcontractkit/Web3_tutorial_Chinese  
 编程环境 https://remix.ethereum.org/
