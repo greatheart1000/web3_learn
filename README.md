@@ -4,6 +4,7 @@
 Rust 资料 https://kaisery.github.io/trpl-zh-cn/ch01-02-hello-world.html  <br>
 学习资料 https://github.com/smartcontractkit/Web3_tutorial_Chinese  
 编程环境 https://remix.ethereum.org/
+web3学习资料和工作机会 https://wcngrtwsafnt.feishu.cn/wiki/VqDqwq3jXirAkXkeHOFc4D9anof  <br>
 https://docs.chain.link/   <br>
 MetaMask  metamask登录密码 baichuan24G  <br>
  <br> https://kcno38rbm7bc.feishu.cn/wiki/OQ5lwXujliSOA4khSZjc0jagnYJ<br>
