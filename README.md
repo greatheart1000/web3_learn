@@ -26,22 +26,22 @@ MetaMask  metamask登录密码 baichuan24G  <br>
  怎么在这个路径下打开vscode呢 命令是什么 code . <br>
 
 node -v 查看当前node的版本           <br>
-npm init 创建一个 nodejs项目，会有package.json文件        <br>
-code . vscode 打开当前的文件夹       <br>
+#### 1. npm init 创建一个 nodejs项目，会有package.json文件        <br>
+#### 2 . code . vscode 打开当前的文件夹       <br>
 
-npm install hardhat --save-dev  <br>安装 hardhat包 只有开发环境使用 安装后 package.json多了内容 <br>"devDependencies": {
+#### 3 .npm install hardhat --save-dev  <br>安装 hardhat包 只有开发环境使用 安装后 package.json多了内容 <br>"devDependencies": {
     "hardhat": "^2.24.2"
   }
-npx hardhat  通过npm 创建一个hardhat项目 <br>
+#### 4 . npx hardhat  通过npm 创建一个hardhat项目 这时package.json会多 @nomicfoundation/hardhat-toolbox  还会多了contracts文件夹 <br>  
 .gitignore 会忽略哪些文件 <br>
 
 ignition文件夹 <br>
 hardhat.config.js文件  <br>
 contract文件夹 <br>
 test文件夹 <br>
-npm install @chainlink/contracts --save-dev 安装这个包 <br>
-npm uninstall @chainlink/contracts 删除命令
-npx hardhat compile 这个命令编译所有在contract文件夹的sol文件
+#### 5.  npm install @chainlink/contracts --save-dev 安装这个包 package.json的 devDependencies会多出 @chainlink/contracts <br>
+#### 5.1 npm uninstall @chainlink/contracts 删除命令
+#### 6.  npx hardhat compile 这个命令编译所有在contract文件夹的sol文件
 
 
 Ethers.js的安装命令 npm install --save ethers <br>
