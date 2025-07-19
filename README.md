@@ -81,3 +81,6 @@ npm install --save-dev @chainlink/env-enc
 
 solana教程  https://ruilab.xyz/blockchain <br>
 
+<br>
+##### hardhat deploy官网有教程 大有收获： https://www.npmjs.com/package/hardhat-deploy <br>
+
