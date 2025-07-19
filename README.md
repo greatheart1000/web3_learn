@@ -41,34 +41,41 @@ contract文件夹 <br>
 test文件夹 <br>
 #### 5.  npm install @chainlink/contracts --save-dev 安装这个包 package.json的 devDependencies会多出 @chainlink/contracts <br>
 #### 5.1 npm uninstall @chainlink/contracts 删除命令
-#### 6.  npx hardhat compile 这个命令编译所有在contract文件夹的sol文件
+#### 6.  npx hardhat compile 这个命令编译所有在contract文件夹的sol文件 显示： Compiled 2 Solidity files successfully (evm target: paris)
 
 
-Ethers.js的安装命令 npm install --save ethers <br>
-ethers.js 的网址 https://docs.ethers.org/v6/api/ 
-npx hardhat run scripts/DeployFundeMe.js
-
+#### 7. Ethers.js的安装命令 npm install --save ethers <br>
+ethers.js 的网址是: https://docs.ethers.org/v6/api/ <br>
+#### 8. npx hardhat run scripts/DeployFundeMe.js   显示如下：<br>
+contract is deploying <br>
+contract has been deployed successfully,contract address is 0x5FbDB2315678afecb367f032d93F642f64180aa3 <br>
+<br>
+如果没成功就 rm -rf artifacts cache 再次运行 npx hardhat compile 以及npx hardhat run scripts/DeployFundeMe.js <br>
+<br>
 npm install --save-dev dotenv  安装第三方的包  <br>
-Alchemy,Infura,QuickNode //第三方服务商  <br>
-npm install --save-dev dotenv  <br>
-npm install --save-dev @chainlink/env-enc 加密的包 明文变密文 <br>
-npx env-enc set-pw 设置密码  <br>
-npx env-enc set   <br>
-SEPOLIE_URL       <br>
+##### Alchemy,Infura,QuickNode //第三方服务商  <br>
+#### 9. npm install --save-dev dotenv  <br>
+#### 10. npm install --save-dev @chainlink/env-enc  加密的包 明文变密文 <br>
+#### 11. npx env-enc set-pw 设置密码111111  <br>
+#### 12 . npx env-enc set   <br>
+SEPOLIE_URL    PRIVATE_KEY    <br>
 Please enter the variable value (input will be hidden):
 **********************************************
 Would you like to set another variable? Please enter the variable name (or press ENTER to finish):  <br>
 PRIVATE_KEY  <br>
 会多一个配置文件 显示如下: <br>
 npm install --save-dev dotenv  
-.env.enc
+##### 13. 多出一个文件: .env.enc
 SEPLIO_URL: ENCRYPTED|YeqxnACd4b1r+iG3cz04PSUogDd5JN4UReAcHNMiVjdcrIeZ0AkuXdCsIR6Hpe5NprGWixsJ9jfO0xQjY0QGmii0Bqx/A2Vkn3Tb4tc7AJdkELZhp7Hi/yNbdUsmTA==      <br>
 PRIVATE_KEY: ENCRYPTED|s7BL6qGaXjpbLDrNAVRLbANXqXRpZaSEh0DmP370Ie+Q3fweqTWnTciY06uEpssu9bBp5GF4               <br>
 
-然后harthat.config.js里面的 require("dotenv").config 改为 require("@chainlink/env-enc").config() <br> 
+#### 14. 然后harthat.config.js里面的 require("dotenv").config 改为 require("@chainlink/env-enc").config() <br> 
 require("@nomicfoundation/hardhat-toolbox"); <br>
 require("dotenv").config  =>  require("@chainlink/env-enc").config() <br>
 然后运行命令  npx hardhat run scripts/deployFundeMe.js --network sepolia   <br>
+
+
+npm install --save-dev @chainlink/env-enc
 
 
 
