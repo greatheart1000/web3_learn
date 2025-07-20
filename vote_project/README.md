@@ -1,12 +1,12 @@
 ## Foundry
 
-Foundry 是一个用 Rust 编写的极速、便携且模块化的以太坊应用开发工具集。
-Foundry 包括：
-Forge： 以太坊测试框架（类似于 Truffle、Hardhat 和 DappTools）。
-Cast： 与 EVM 智能合约交互、发送交易和获取链上数据的瑞士军刀（多功能工具）。
-Anvil： 本地以太坊节点，类似于 Ganache、Hardhat Network。
-Chisel： 快速、实用且详细的 Solidity REPL（交互式命令行环境）。
-https://book.getfoundry.sh/
+Foundry 是一个用 Rust 编写的极速、便携且模块化的以太坊应用开发工具集。 <br>
+Foundry 包括： <br>
+Forge： 以太坊测试框架（类似于 Truffle、Hardhat 和 DappTools）。 <br>
+Cast： 与 EVM 智能合约交互、发送交易和获取链上数据的瑞士军刀（多功能工具）。 <br>
+Anvil： 本地以太坊节点，类似于 Ganache、Hardhat Network。 <br>
+Chisel： 快速、实用且详细的 Solidity REPL（交互式命令行环境）。 <br>
+https://book.getfoundry.sh/ <br>
 
 ## Usage
 
