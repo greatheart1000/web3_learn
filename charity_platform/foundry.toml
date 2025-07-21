@@ -1,0 +1,15 @@
+[profile.default]
+solc_version   = "0.8.27"
+evm_version    = "prague"
+optimizer      = true
+optimizer-runs = 200
+
+src  = "src"    # ← 你所有 *.sol 实际都放在 src/ 里
+out  = "out"
+libs = ["lib"]  # ← Forge 会到 lib/ 下去按 remappings 找依赖
+
+# （可选）如果你想把 remappings 写到这里，也可以
+#remappings = [
+#  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+#  "forge-std/=lib/forge-std/src/"
+#]
