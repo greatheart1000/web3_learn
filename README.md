@@ -24,7 +24,7 @@ MetaMask  metamask登录密码 baichuan24G  <br>
  npm install hardhat --save-dev <br>
  npx hardhat  node情况下运行某个命令 <br>
  怎么在这个路径下打开vscode呢 命令是什么 code . <br>
-
+anchor init solana-playground  创建一个solana项目  <br>
 node -v 查看当前node的版本           <br>
 #### 1. npm init 创建一个 nodejs项目，会有package.json文件        <br>
 #### 2 . code . vscode 打开当前的文件夹       <br>
