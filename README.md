@@ -85,3 +85,47 @@ solana教程  https://ruilab.xyz/blockchain <br>
 ##### hardhat deploy官网有教程 大有收获： https://www.npmjs.com/package/hardhat-deploy <br>
 
 
+Uniswap 是以太坊区块链上的去中心化交易所（DEX），它基于自动化做市商（AMM，Automated Market Maker）模型，而不是传统的订单簿交易系统。
+Uniswap 由 Hayden Adams 于 2018 年推出，其核心目标是促进以太坊网络中 ERC-20 代币的流动性交易。
+
+Uniswap 的核心特点
+1. 去中心化
+没有中心化的控制方，所有交易直接在智能合约中完成。
+2. 自动化做市商（AMM）模型
+Uniswap 通过一个数学公式（x×y=kx \times y = kx×y=k）自动平衡买卖双方的价格和流动性，而非依赖传统的订单簿。
+3. 流动性池
+用户可以将代币存入流动性池，为市场提供流动性，并从中获得交易手续费作为奖励。
+4. 无需许可（Permissionless）
+任何人都可以在 Uniswap 上创建交易对或添加流动性，而无需第三方授权。
+5. 完全透明
+所有的交易和流动性池操作都记录在以太坊的公开区块链上。
+
+Uniswap 的工作原理
+1. 流动性池
+Uniswap 使用流动性池（Liquidity Pool）而不是买卖订单簿。
+每个交易对（如 ETH/USDT）都有一个池子，流动性提供者（Liquidity Providers, LPs）通过存入一对代币（例如 1 ETH 和等值的 USDT）为池子提供流动性。
+2. 恒定乘积公式（x×y=kx \times y = kx×y=k）
+Uniswap 使用恒定乘积公式来维持池子的平衡：
+● xxx：流动性池中一种代币的数量。
+● yyy：流动性池中另一种代币的数量。
+● kkk：恒定值，代表总池子价值。
+当用户交易代币时，Uniswap 会调整池中代币的数量以确保公式始终成立。
+3. 手续费
+每笔交易收取 0.3% 的手续费，作为奖励分配给流动性提供者。
+4. 价格滑点
+由于恒定乘积公式的限制，大额交易会显著影响池中代币的比例，导致价格滑点（Slippage）。
+
+Uniswap 的版本更新
+1. Uniswap V1（2018）
+  ○ 只支持 ETH 和 ERC-20 代币的交易对。
+  ○ 用户需要在交易中将 ETH 用作中间媒介。
+2. Uniswap V2（2020）
+  ○ 支持 ERC-20 与 ERC-20 的直接交易对。
+  ○ 引入闪电贷（Flash Swaps）。
+  ○ 改进价格预言机。
+3. Uniswap V3（2021）
+  ○ 引入集中流动性（Concentrated Liquidity），允许流动性提供者选择价格范围，提高资本效率。
+  ○ 提供多个手续费级别（如 0.05%、0.3%、1%）。
+  ○ 极大提高了交易效率和流动性管理灵活性。
+
+
