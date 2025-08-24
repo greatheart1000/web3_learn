@@ -1,6 +1,7 @@
 # 相关资料
 ## MetaMask
 ![image](岗位转型路线规划图_副本.jpg)
+区块链ID查询 https://chainid.network/chains.json <br>
 Rust 资料 https://kaisery.github.io/trpl-zh-cn/ch01-02-hello-world.html  <br>
 学习资料 https://github.com/smartcontractkit/Web3_tutorial_Chinese  
 编程环境 https://remix.ethereum.org/
