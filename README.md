@@ -19,6 +19,10 @@ MetaMask  metamask登录密码 baichuan24G  <br>
  跟我学 Solidity https://learnblockchain.cn/article/1952<br>
 
  ERC20 标准合约 https://docs.openzeppelin.com/contracts/4.x/erc20 <br>
+### Solana公链生态开发(Rust)
+课程技术栈: Rust, React/Nextjs, Typescript, Solana-web3.js, Spl-token.js, Radix-ui, Tanstack, Tailwindcss,
+Anchor框架，Pinata链上存储，Metaplex, SPL标准,Pyth
+
 
  node -v <br>
  node init <br>
